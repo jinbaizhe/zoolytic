@@ -374,7 +374,7 @@ class MainWindow(stateComponent: ZooStateComponent, private val project: Project
     }
 
     fun background(title: String, task: () -> Unit) {
-        Notifications.Bus.notify(Notification("ApplicationName", "MethodName", title, NotificationType.INFORMATION))
+//        Notifications.Bus.notify(Notification("ApplicationName", "MethodName", title, NotificationType.INFORMATION))
         ApplicationManager.getApplication().invokeLater {
             ProgressManager.getInstance().run(object: Task.Backgroundable(project, title, false) {
                 override fun run(indicator: ProgressIndicator) {
